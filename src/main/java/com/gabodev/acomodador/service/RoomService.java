@@ -77,6 +77,80 @@ public class RoomService implements IRoomService{
         return roomDto;
     }
 
+    public List<ChairDto> assignBestSeats(int numberOfTickets) {
+        List<ChairDto> bestSeats = new ArrayList<>();
+        int centerRow = room.size() / 2;
+
+        Row centerRowObject = room.get(centerRow);
+        List<Chair> availableSeatsInCenterRow = getAvailableSeats(centerRowObject);
+        int availableSeatsCount = availableSeatsInCenterRow.size();
+
+        if (availableSeatsCount >= numberOfTickets) {
+
+            int startIndex = (availableSeatsCount - numberOfTickets) / 2;
+            for (int i = 0; i < numberOfTickets; i++) {
+                ChairDto chairDto = mapper.map(availableSeatsInCenterRow.get(startIndex + i), ChairDto.class);
+                markSeatAsOccupied(chairDto);
+                bestSeats.add(chairDto);
+                LogUtils.logInfo("Seat assigned: " + chairDto);
+            }
+            return bestSeats;
+        }
+
+        for (int i = 1; centerRow - i >= 0 || centerRow + i < room.size(); i++) {
+            if (centerRow - i >= 0) {
+                Row upperRow = room.get(centerRow - i);
+                List<Chair> availableSeatsInUpperRow = getAvailableSeats(upperRow);
+                if (availableSeatsInUpperRow.size() >= numberOfTickets) {
+                    return selectBestSeats(availableSeatsInUpperRow, numberOfTickets, bestSeats);
+                }
+            }
+            if (centerRow + i < room.size()) {
+                Row lowerRow = room.get(centerRow + i);
+                List<Chair> availableSeatsInLowerRow = getAvailableSeats(lowerRow);
+                if (availableSeatsInLowerRow.size() >= numberOfTickets) {
+                    return selectBestSeats(availableSeatsInLowerRow, numberOfTickets, bestSeats);
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private List<Chair> getAvailableSeats(Row row) {
+        List<Chair> availableSeats = new ArrayList<>();
+        for (Chair chair : row.getChairs()) {
+            if (!chair.isOccupied()) {
+                availableSeats.add(chair);
+            }
+        }
+        return availableSeats;
+    }
+
+    private List<ChairDto> selectBestSeats(List<Chair> availableSeats, int numberOfTickets, List<ChairDto> bestSeats) {
+
+        int startIndex = (availableSeats.size() - numberOfTickets) / 2;
+        for (int i = 0; i < numberOfTickets; i++) {
+            ChairDto chairDto = mapper.map(availableSeats.get(startIndex + i), ChairDto.class);
+            markSeatAsOccupied(chairDto);
+            bestSeats.add(chairDto);
+        }
+        return bestSeats;
+    }
+
+    private void markSeatAsOccupied(ChairDto chairDto) {
+
+        for (Row row : room) {
+            for (Chair chair : row.getChairs()) {
+                if (chair.getRow() == chairDto.getRow() && chair.getSeatNumber() == chairDto.getSeatNumber()) {
+                    chair.setOccupied(true);
+                    chairRepository.save(chair);
+                    LogUtils.logInfo("Seat marked as occupied: " + chairDto);
+                    return;
+                }
+            }
+        }
+    }
 
 
 }

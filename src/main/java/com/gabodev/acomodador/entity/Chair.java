@@ -2,15 +2,15 @@ package com.gabodev.acomodador.entity;
 
 import com.gabodev.acomodador.repository.ChairRepository;
 import jakarta.annotation.sql.DataSourceDefinition;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
-@Entity
+@Setter
+@Entity(name = "chair")
+@Table(name = "CHAIRS")
 public class Chair {
 
     public Chair() {

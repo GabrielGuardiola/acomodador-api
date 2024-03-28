@@ -48,3 +48,11 @@
 [INFO ] 2024-03-28 13:01:42.522 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
 [INFO ] 2024-03-28 13:01:48.946 [main] AcomodadorApplication - RoomService initialized
 [INFO ] 2024-03-28 13:01:49.706 [main] AcomodadorApplication - Started AcomodadorApplication in 7.929 seconds (process running for 9.559)
+[INFO ] 2024-03-28 13:47:31.202 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 17.0.10 with PID 14404 (C:\Users\gabriel.guardiola\OneDrive - BABEL\Documentos\Projects\acomodador-api\target\classes started by gabriel.guardiola in C:\Users\gabriel.guardiola\OneDrive - BABEL\Documentos\Projects\acomodador-api)
+[INFO ] 2024-03-28 13:47:31.220 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-28 13:47:37.625 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-28 13:47:38.354 [main] AcomodadorApplication - Started AcomodadorApplication in 7.855 seconds (process running for 9.47)
+[INFO ] 2024-03-28 13:53:17.198 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 17.0.10 with PID 5412 (C:\Users\gabriel.guardiola\OneDrive - BABEL\Documentos\Projects\acomodador-api\target\classes started by gabriel.guardiola in C:\Users\gabriel.guardiola\OneDrive - BABEL\Documentos\Projects\acomodador-api)
+[INFO ] 2024-03-28 13:53:17.218 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-28 13:53:23.916 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-28 13:53:24.576 [main] AcomodadorApplication - Started AcomodadorApplication in 8.212 seconds (process running for 10.198)
