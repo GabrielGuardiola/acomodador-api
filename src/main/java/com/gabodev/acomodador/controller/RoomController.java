@@ -2,7 +2,6 @@ package com.gabodev.acomodador.controller;
 
 import com.gabodev.acomodador.dto.ChairDto;
 import com.gabodev.acomodador.dto.PurchaseTicketRequest;
-import com.gabodev.acomodador.dto.RowDto;
 import com.gabodev.acomodador.service.IRoomService;
 import com.gabodev.acomodador.util.LogUtils;
 import org.springframework.web.bind.annotation.*;
@@ -22,9 +21,9 @@ public class RoomController {
     }
 
     @GetMapping("/room")
-    public Map<String, List<RowDto>> getRoom() {
+    public Map<String, List<ChairDto>> getRoom() {
         LogUtils.logInfo("Room request received");
-        List<RowDto> resRoom = roomService.getRoom();
+        List<ChairDto> resRoom = roomService.getRoom();
         return Map.of("room", resRoom);
     }
 
