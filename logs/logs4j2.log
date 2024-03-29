@@ -44,3 +44,47 @@
 [INFO ] 2024-03-29 12:19:56.460 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
 [INFO ] 2024-03-29 12:23:31.816 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 17.0.10 with PID 22760 (C:\Users\gabriel.guardiola\OneDrive - BABEL\Documentos\Projects\acomodador-api\target\classes started by gabriel.guardiola in C:\Users\gabriel.guardiola\OneDrive - BABEL\Documentos\Projects\acomodador-api)
 [INFO ] 2024-03-29 12:23:31.826 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:31:12.422 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 17832 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 12:31:12.426 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:31:54.163 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 28244 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 12:31:54.167 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:35:48.144 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 15476 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 12:35:48.147 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:35:50.303 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-29 12:35:50.732 [main] AcomodadorApplication - Started AcomodadorApplication in 2.793 seconds (process running for 3.326)
+[INFO ] 2024-03-29 12:37:01.683 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 4980 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 12:37:01.686 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:37:03.815 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-29 12:37:04.097 [main] AcomodadorApplication - Started AcomodadorApplication in 2.622 seconds (process running for 3.145)
+[INFO ] 2024-03-29 12:38:55.723 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 17268 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 12:38:55.727 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:38:57.821 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-29 12:38:58.181 [main] AcomodadorApplication - Started AcomodadorApplication in 2.667 seconds (process running for 3.179)
+[INFO ] 2024-03-29 12:40:09.057 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 20136 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 12:40:09.061 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:40:11.217 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-29 12:40:11.605 [main] AcomodadorApplication - Started AcomodadorApplication in 2.761 seconds (process running for 3.284)
+[INFO ] 2024-03-29 12:40:35.602 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 29568 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 12:40:35.607 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:41:54.308 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 17636 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 12:41:54.312 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 12:41:56.645 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-29 12:41:56.987 [main] AcomodadorApplication - Started AcomodadorApplication in 2.898 seconds (process running for 3.447)
+[INFO ] 2024-03-29 12:46:07.009 [http-nio-8080-exec-3] AcomodadorApplication - Room request received
+[INFO ] 2024-03-29 13:00:01.724 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 23708 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 13:00:01.728 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 13:00:04.043 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-29 13:00:04.353 [main] AcomodadorApplication - Started AcomodadorApplication in 2.835 seconds (process running for 3.365)
+[INFO ] 2024-03-29 13:00:38.309 [http-nio-8080-exec-2] AcomodadorApplication - Room request received
+[INFO ] 2024-03-29 13:01:13.289 [http-nio-8080-exec-3] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@1ade6a8d
+[INFO ] 2024-03-29 13:01:19.591 [http-nio-8080-exec-4] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@5bde537d
+[INFO ] 2024-03-29 13:01:38.505 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 28264 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 13:01:38.508 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 13:01:40.876 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-29 13:01:41.291 [main] AcomodadorApplication - Started AcomodadorApplication in 2.988 seconds (process running for 3.525)
+[INFO ] 2024-03-29 13:01:58.411 [http-nio-8080-exec-2] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@942493d
+[INFO ] 2024-03-29 13:03:17.013 [http-nio-8080-exec-4] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@65ec7a53
+[INFO ] 2024-03-29 13:03:22.469 [http-nio-8080-exec-10] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@211191fe
+[INFO ] 2024-03-29 13:03:30.340 [http-nio-8080-exec-7] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@1c128423
+[INFO ] 2024-03-29 13:03:37.539 [http-nio-8080-exec-8] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@1097047d
+[INFO ] 2024-03-29 13:03:55.752 [http-nio-8080-exec-9] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@167f86ab

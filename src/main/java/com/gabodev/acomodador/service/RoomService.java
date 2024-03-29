@@ -26,7 +26,6 @@ public class RoomService implements IRoomService{
     public void init() {
 
         this.generateRoom();
-        this.printRoom();
 
         LogUtils.logInfo("RoomService initialized");
     }
@@ -48,14 +47,6 @@ public class RoomService implements IRoomService{
             }
         }
     }
-    public void printRoom() {
-        for (Chair chair : room) {
-            for(int i = 1; i <= 9; i++) {
-                System.out.print(chair.getSeatNumber() + " ");
-            }
-            System.out.println();
-        }
-    }
 
     public List<ChairDto> getRoom() {
         List<ChairDto> roomDto = new ArrayList<>();
@@ -67,4 +58,54 @@ public class RoomService implements IRoomService{
 
         return roomDto;
     }
+
+    public List<ChairDto> assignBestSeats(int numberOfTickets) {
+        List<Chair> chairs = chairRepository.findAll();
+        //convert list chair to matrix
+        List<List<Chair>> roomMatrix = new ArrayList<>();
+
+        for (int i = 0; i < 9; i++) {
+            List<Chair> row = new ArrayList<>();
+            for (int j = 0; j < 10; j++) {
+                row.add(chairs.get(i * 10 + j));
+            }
+            roomMatrix.add(row);
+        }
+        // Buscar las mejores sillas disponibles en la salaNecesitamos un método que en caso de vender más entradas conjuntas debemos buscar la manera de que el sistema nos permita asignar las mejores butacas libres y devolver qué butacas ha escogido el sistema. Las mejores butacas serán aquellas que están juntas (contiguas en misma fila), lo más cerca del escenario/pantalla y lo más centradas posibles.
+        List<Chair> bestSeats = findBestSeats(roomMatrix, numberOfTickets);
+        List<ChairDto> bestSeatsDto = new ArrayList<>();
+        for (Chair chair : bestSeats) {
+            chair.setOccupied(true);
+            chairRepository.save(chair);
+            bestSeatsDto.add(mapper.map(chair, ChairDto.class));
+        }
+        return bestSeatsDto;
+
+    }
+
+    private List<Chair> findBestSeats(List<List<Chair>> roomMatrix, int numberOfTickets) {
+        List<Chair> bestSeats = new ArrayList<>();
+        int bestRow = 0;
+        int bestColumn = 0;
+        int bestDistance = Integer.MAX_VALUE;
+        for (int i = 0; i < roomMatrix.size(); i++) {
+            List<Chair> row = roomMatrix.get(i);
+            for (int j = 0; j < row.size(); j++) {
+                Chair chair = row.get(j);
+                if (!chair.isOccupied()) {
+                    int distance = Math.abs(5 - j) + Math.abs(5 - i);
+                    if (distance < bestDistance) {
+                        bestDistance = distance;
+                        bestRow = i;
+                        bestColumn = j;
+                    }
+                }
+            }
+        }
+        for (int i = 0; i < numberOfTickets; i++) {
+            bestSeats.add(roomMatrix.get(bestRow).get(bestColumn + i));
+        }
+        return bestSeats;
+    }
+
 }

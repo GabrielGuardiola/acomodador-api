@@ -21,7 +21,7 @@ public class Chair {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "row")
+    @Column(name = "row_number")
     private int row;
 
     @Column(name = "seat_number")
