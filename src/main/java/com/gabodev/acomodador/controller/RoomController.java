@@ -1,6 +1,8 @@
 package com.gabodev.acomodador.controller;
 
 import com.gabodev.acomodador.dto.ChairDto;
+import com.gabodev.acomodador.dto.PurchaseTicketRequest;
+import com.gabodev.acomodador.dto.RowDto;
 import com.gabodev.acomodador.service.IRoomService;
 import com.gabodev.acomodador.util.LogUtils;
 import org.springframework.web.bind.annotation.*;
@@ -20,17 +22,17 @@ public class RoomController {
     }
 
     @GetMapping("/room")
-    public Map<String, List<ChairDto>> getRoom() {
+    public Map<String, List<RowDto>> getRoom() {
         LogUtils.logInfo("Room request received");
-        List<ChairDto> resRoom = roomService.getRoom();
+        List<RowDto> resRoom = roomService.getRoom();
         return Map.of("room", resRoom);
     }
 
-//    @PostMapping("/tickets/purchase")
-//    public Map<String, List<ChairDto>> purchaseTickets(@RequestBody PurchaseTicketRequest body) {
-//        LogUtils.logInfo("Purchase request received: " + body);
-//        int numberOfTickets = body.getAmmount();
-//        List<ChairDto> resChairs = roomService.assignBestSeats(numberOfTickets);
-//        return Map.of("chairs_reserved", resChairs);
-//    }
+    @PostMapping("/tickets/purchase")
+    public Map<String, List<ChairDto>> purchaseTickets(@RequestBody PurchaseTicketRequest body) {
+        LogUtils.logInfo("Purchase request received: " + body);
+        int numberOfTickets = body.getAmmount();
+        List<ChairDto> resChairs = roomService.assignBestSeats(numberOfTickets);
+        return Map.of("chairs_reserved", resChairs);
+    }
 }

@@ -5,7 +5,6 @@ import lombok.Data;
 
 @Data
 public class ChairDto {
-
     private int row;
     private boolean occupied;
     private int seatNumber;
@@ -18,4 +17,5 @@ public class ChairDto {
         this.occupied = occupied;
         this.seatNumber = seatNumber;
     }
+
 }
