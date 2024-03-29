@@ -25,6 +25,8 @@ public class Chair {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "row_number")
     private int row;
     private boolean occupied;
     private int seatNumber;
