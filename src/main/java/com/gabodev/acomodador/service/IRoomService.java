@@ -9,7 +9,8 @@ public interface IRoomService {
 
     void init();
 
-    List<ChairDto> getRoom();
+    List<RowDto> getRoom();
+    void printRoom();
 
     List<ChairDto> assignBestSeats(int numberOfTickets);
 
