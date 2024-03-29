@@ -88,3 +88,9 @@
 [INFO ] 2024-03-29 13:03:30.340 [http-nio-8080-exec-7] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@1c128423
 [INFO ] 2024-03-29 13:03:37.539 [http-nio-8080-exec-8] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@1097047d
 [INFO ] 2024-03-29 13:03:55.752 [http-nio-8080-exec-9] AcomodadorApplication - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@167f86ab
+[INFO ] 2024-03-29 13:16:26.308 [main] AcomodadorApplication - Starting AcomodadorApplication using Java 19.0.1 with PID 4528 (F:\Proyectos\Babel\acomodador-api\target\classes started by Gabriel in F:\Proyectos\Babel\acomodador-api)
+[INFO ] 2024-03-29 13:16:26.312 [main] AcomodadorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 2024-03-29 13:16:28.915 [main] AcomodadorApplication - RoomService initialized
+[INFO ] 2024-03-29 13:16:29.245 [main] AcomodadorApplication - Started AcomodadorApplication in 3.155 seconds (process running for 3.695)
+[INFO ] 2024-03-29 13:16:38.013 [http-nio-8080-exec-1] AcomodadorApplication - POST /tickets/purchase - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@73dfc306
+[INFO ] 2024-03-29 13:17:01.105 [http-nio-8080-exec-6] AcomodadorApplication - POST /tickets/purchase - Purchase request received: com.gabodev.acomodador.dto.PurchaseTicketRequest@3187389b
