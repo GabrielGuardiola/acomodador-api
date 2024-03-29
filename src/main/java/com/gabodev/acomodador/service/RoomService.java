@@ -61,7 +61,6 @@ public class RoomService implements IRoomService{
 
     public List<ChairDto> assignBestSeats(int numberOfTickets) {
         List<Chair> chairs = chairRepository.findAll();
-        //convert list chair to matrix
         List<List<Chair>> roomMatrix = new ArrayList<>();
 
         for (int i = 0; i < 9; i++) {
@@ -71,16 +70,19 @@ public class RoomService implements IRoomService{
             }
             roomMatrix.add(row);
         }
-        // Buscar las mejores sillas disponibles en la salaNecesitamos un método que en caso de vender más entradas conjuntas debemos buscar la manera de que el sistema nos permita asignar las mejores butacas libres y devolver qué butacas ha escogido el sistema. Las mejores butacas serán aquellas que están juntas (contiguas en misma fila), lo más cerca del escenario/pantalla y lo más centradas posibles.
         List<Chair> bestSeats = findBestSeats(roomMatrix, numberOfTickets);
         List<ChairDto> bestSeatsDto = new ArrayList<>();
         for (Chair chair : bestSeats) {
-            chair.setOccupied(true);
-            chairRepository.save(chair);
+            markAsOccupied(chair);
             bestSeatsDto.add(mapper.map(chair, ChairDto.class));
         }
         return bestSeatsDto;
 
+    }
+
+    private void markAsOccupied(Chair chair) {
+            chair.setOccupied(true);
+            chairRepository.save(chair);
     }
 
     private List<Chair> findBestSeats(List<List<Chair>> roomMatrix, int numberOfTickets) {

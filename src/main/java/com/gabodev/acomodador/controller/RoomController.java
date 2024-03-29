@@ -22,14 +22,14 @@ public class RoomController {
 
     @GetMapping("/room")
     public Map<String, List<ChairDto>> getRoom() {
-        LogUtils.logInfo("Room request received");
+        LogUtils.logInfo("GET /room - Room request received");
         List<ChairDto> resRoom = roomService.getRoom();
         return Map.of("room", resRoom);
     }
 
     @PostMapping("/tickets/purchase")
     public Map<String, List<ChairDto>> purchaseTickets(@RequestBody PurchaseTicketRequest body) {
-        LogUtils.logInfo("Purchase request received: " + body);
+        LogUtils.logInfo("POST /tickets/purchase - Purchase request received: " + body);
         int numberOfTickets = body.getAmmount();
         List<ChairDto> resChairs = roomService.assignBestSeats(numberOfTickets);
         return Map.of("chairs_reserved", resChairs);
